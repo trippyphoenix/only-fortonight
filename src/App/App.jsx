@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <LandingPage />
+      <NavBar />
       <Context.Provider value={productsData}>
       <LandingPage />
       </Context.Provider>
