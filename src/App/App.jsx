@@ -9,7 +9,7 @@ import LandingPage from '../LandingPage/LandingPage.jsx'
 
 function App() {
   const [productsData, setProductsData] = useState(products)
-  
+  // krwepooo
   return (
     <div>
       <NavBar />
