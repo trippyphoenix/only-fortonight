@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #1D1F22; 
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 50px;
+    border-bottom: 1px solid #ff0000;
+}
+
+.navbar_left, .navbar_right {
+    display: flex;
+    gap: 20px;
+}

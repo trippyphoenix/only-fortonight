@@ -1,0 +1,223 @@
+export const products = [
+	// WOMEN
+	{
+		id: 1,
+		gender: "WOMEN",
+		name: "Apollo",
+		type: "Running Short",
+		imgMain: "../assets/images/WOMEN_running_shorts.jpg",
+		imgAlt: "/images/apollo-side.jpg",
+		sizes: ["XS", "S", "M", "L"],
+		price: 50.0,
+		description:
+			"Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
+	},
+	{
+		id: 2,
+		gender: "WOMEN",
+		name: "Athena",
+		type: "Yoga Pants",
+		imgMain: "../assets/images/WOMEN_Yoga_Pants.jpg",
+		imgAlt: "/images/athena-side.jpg",
+		sizes: ["S", "M", "L"],
+		price: 65.0,
+		description:
+			"Flexible, high-rise yoga pants that support your every move. Made from breathable fabric ideal for workouts or lounging.",
+	},
+	{
+		id: 3,
+		gender: "WOMEN",
+		name: "Iris",
+		type: "Tank Top",
+		imgMain: "../assets/images/WOMEN_Tank_Top_.jpg",
+		imgAlt: "/images/iris-back.jpg",
+		sizes: ["XS", "S", "M"],
+		price: 35.0,
+		description:
+			"Lightweight tank top with moisture-wicking technology. Perfect for hot yoga or sunny day jogs.",
+	},
+	{
+		id: 4,
+		gender: "WOMEN",
+		name: "Luna",
+		type: "Windbreaker Jacket",
+		imgMain: "../assets/images/WOMEN_Windbreaker_Jacket.jpg",
+		imgAlt: "/images/luna-hood.jpg",
+		sizes: ["M", "L"],
+		price: 90.0,
+		description:
+			"Stay dry and stylish with this windbreaker featuring adjustable hoods and water-resistant finish.",
+	},
+	{
+		id: 5,
+		gender: "WOMEN",
+		name: "Juno",
+		type: "Sports Bra",
+		imgMain: "../assets/images/WOMEN_Sports_Bra.jpg",
+		imgAlt: "/images/juno-back.jpg",
+		sizes: ["XS", "S", "M", "L"],
+		price: 40.0,
+		description:
+			"Supportive yet comfortable sports bra designed for medium to high impact workouts.",
+	},
+	{
+		id: 6,
+		gender: "WOMEN",
+		name: "Nova",
+		type: "Training Shoes",
+		imgMain: "../assets/images/WOMEN_Training_Shoes.jpg",
+		imgAlt: "/images/nova-sole.jpg",
+		sizes: ["36", "37", "38", "39", "40"],
+		price: 120.0,
+		description:
+			"Lightweight training shoes engineered with responsive cushioning and grip for all terrains.",
+	},
+
+	// MEN
+	{
+		id: 7,
+		gender: "MEN",
+		name: "Zion",
+		type: "Sport Tank",
+		imgMain: "../assets/images/MEN_Sport_Tank.jpg",
+		imgAlt: "/images/zion-back.jpg",
+		sizes: ["S", "M", "L", "XL"],
+		price: 45.0,
+		description:
+			"Comfortable and durable sport tank made with breathable material. Perfect for workouts, yoga, or casual wear.",
+	},
+	{
+		id: 8,
+		gender: "MEN",
+		name: "Thor",
+		type: "Compression Shirt",
+		imgMain: "../assets/images/MEN_Compression_Shirt.jpg",
+		imgAlt: "/images/thor-back.jpg",
+		sizes: ["M", "L", "XL"],
+		price: 60.0,
+		description:
+			"Muscle-enhancing compression shirt with sweat-wicking fabric for optimal performance.",
+	},
+	{
+		id: 9,
+		gender: "MEN",
+		name: "Odin",
+		type: "Track Pants",
+		imgMain: "../assets/images/MEN_Track_Pants.jpg",
+		imgAlt: "/images/odin-side.jpg",
+		sizes: ["S", "M", "L"],
+		price: 70.0,
+		description:
+			"Track pants made with stretch material for ease of movement. Designed for training and casual use.",
+	},
+	{
+		id: 10,
+		gender: "MEN",
+		name: "Ares",
+		type: "Running Shoes",
+		imgMain: "../assets/images/MEN_Running_Shoes.jpg",
+		imgAlt: "/images/ares-sole.jpg",
+		sizes: ["40", "41", "42", "43"],
+		price: 130.0,
+		description:
+			"Engineered for long-distance runs. Shock-absorbing soles and breathable mesh upper.",
+	},
+	{
+		id: 11,
+		gender: "MEN",
+		name: "Helios",
+		type: "Hoodie",
+		imgMain: "../assets/images/MEN_Hoodie.jpg",
+		imgAlt: "/images/helios-hood.jpg",
+		sizes: ["M", "L", "XL"],
+		price: 80.0,
+		description:
+			"Classic pullover hoodie with warm inner lining and adjustable drawstring.",
+	},
+	{
+		id: 12,
+		gender: "MEN",
+		name: "Kairos",
+		type: "Gym Shorts",
+		imgMain: "../assets/images/MEN_Gym_Shorts.jpg",
+		imgAlt: "/images/kairos-side.jpg",
+		sizes: ["S", "M", "L"],
+		price: 38.0,
+		description:
+			"Light and flexible gym shorts with quick-dry technology for intense workouts.",
+	},
+
+	// KIDS
+	{
+		id: 13,
+		gender: "KIDS",
+		name: "Pixel",
+		type: "Graphic Tee",
+		imgMain: "../assets/images/KIDS_Graphic_Tee.jpg",
+		imgAlt: "/images/pixel-back.jpg",
+		sizes: ["XS", "S", "M"],
+		price: 25.0,
+		description:
+			"Fun and colorful graphic tee made from 100% organic cotton. Great for everyday play.",
+	},
+	{
+		id: 14,
+		gender: "KIDS",
+		name: "Bolt",
+		type: "Joggers",
+		imgMain: "../assets/images/KIDS_Joggers.jpg",
+		imgAlt: "/images/bolt-cuff.jpg",
+		sizes: ["S", "M", "L"],
+		price: 35.0,
+		description:
+			"Durable joggers with elastic waist and cuffs for maximum comfort during activity.",
+	},
+	{
+		id: 15,
+		gender: "KIDS",
+		name: "Zippy",
+		type: "Zip Hoodie",
+		imgMain: "../assets/images/KIDS_Zip_Hoodie.jpg",
+		imgAlt: "/images/zippy-hood.jpg",
+		sizes: ["M", "L"],
+		price: 45.0,
+		description:
+			"Bright and cozy zip hoodie with soft fleece lining to keep kids warm all day.",
+	},
+	{
+		id: 16,
+		gender: "KIDS",
+		name: "Racer",
+		type: "Sneakers",
+		imgMain: "../assets/images/KIDS_Sneakers.jpg",
+		imgAlt: "/images/racer-side.jpg",
+		sizes: ["32", "33", "34", "35"],
+		price: 55.0,
+		description:
+			"Sporty sneakers for kids with velcro straps and cushioned soles for active adventures.",
+	},
+	{
+		id: 17,
+		gender: "KIDS",
+		name: "Tango",
+		type: "Polo Shirt",
+		imgMain: "../assets/images/KIDS_Polo_Shirt.jpg",
+		imgAlt: "/images/tango-back.jpg",
+		sizes: ["XS", "S", "M"],
+		price: 30.0,
+		description:
+			"Stylish polo shirt that pairs well with jeans or shorts. Breathable fabric for comfort.",
+	},
+	{
+		id: 18,
+		gender: "KIDS",
+		name: "Orbit",
+		type: "Swim Shorts",
+		imgMain: "../assets/images/KIDS_Swim_Shorts.jpg",
+		imgAlt: "/images/orbit-back.jpg",
+		sizes: ["S", "M", "L"],
+		price: 28.0,
+		description:
+			"Colorful swim shorts with quick-dry material and fun prints. Ideal for beach days.",
+	},
+];
