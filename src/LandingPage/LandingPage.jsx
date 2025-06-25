@@ -1,24 +1,23 @@
 import React, { useContext } from 'react'
 import styles from './LandingPage.module.css'
 import Context from "../UseContext/Context.js"
+import ProductCard from './ProductCards/ProductCard.jsx'
 
-const LandingPage = () => {
+const LandingPage = ({sort}) => {
   const data = useContext(Context);
-  console.log(data);
+  const filteredData = data.filter((product)=> product.gender == sort)
+  console.log(filteredData);
   return (
     <div className={styles.landingPage}>
         <div className={styles.landingPage_header}>
             <p>Category Name</p>
         </div>
-        <div className={styles.landingPage_products}>
-            {/* {data.map((product) => (
-                <div className={styles.landingPage_product}>
-                    <img src="../assets/images/WOMEN_running_shorts.jpg" alt={product.name} />
-                    <p>{product.name}</p>
-                </div>
-            ))} */}
-            <img src="./" alt="lalal" />
-            {/* <p>{product.name}</p> */}
+        <div className={styles.productCard_container}>
+          {filteredData.map((product)=>(
+            <div key={product.id} className={styles.productCard}>
+              <ProductCard product={product} />
+            </div>
+          ))}
         </div>
     </div>
   )

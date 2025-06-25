@@ -1,21 +1,32 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #1D1F22; 
-    text-decoration: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: #1d1f22;
+	text-decoration: none;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;
-    height: 50px;
-    border-bottom: 1px solid #ff0000;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 50px;
+	height: auto;
 }
 
-.navbar_left, .navbar_right {
-    display: flex;
-    gap: 20px;
+.navbar_left a {
+	padding: 25px 10px;
+	border-bottom: 2px solid transparent;
+	transition: all 0.3s ease;
+}
+
+.navbar_left,
+.navbar_right {
+	display: flex;
+	gap: 20px;
+}
+
+.active {
+	color: #5ece7b;
+	border-color: #5ece7b !important;
 }
