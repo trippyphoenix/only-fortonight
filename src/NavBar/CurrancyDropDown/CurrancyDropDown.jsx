@@ -1,19 +1,32 @@
 import React, { useState } from "react";
 import styles from "./CurrencyDropdown.module.css";
 
-const CurrencyDropdown = () => {
+const CurrencyDropdown = ({ setData }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [selected, setSelected] = useState({ symbol: "$", code: "USD" });
-
 	const currencies = [
-		{ symbol: "$", code: "USD" },
-		{ symbol: "€", code: "EUR" },
-		{ symbol: "¥", code: "JPY" },
+		{ symbol: "$", code: "USD", currency: 3 },
+		{ symbol: "€", code: "EUR", currency: 1 },
+		{ symbol: "¥", code: "JPY", currency: 145 },
 	];
-
 	const handleSelect = (currency) => {
+		console.log(currency);
 		setSelected(currency);
 		setIsOpen(false);
+
+		setData((prevProducts) => {
+			// Define conversion rates (adjust these values as needed)
+			const rates = {
+				USD: 1, // Base currency
+				EUR: 3.2, // 1 USD = 0.85 EUR
+				JPY: 145, // 1 USD = 110 JPY
+			};
+
+			return prevProducts.map((product) => ({
+				...product,
+				price: product.originalPrice * rates[currency.code],
+			}));
+		});
 	};
 
 	return (

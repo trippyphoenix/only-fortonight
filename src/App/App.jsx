@@ -9,10 +9,11 @@ import LandingPage from '../LandingPage/LandingPage.jsx'
 
 function App() {
   const [productsData, setProductsData] = useState(products)
+  
   return (
     <div>
+      <Context.Provider value={{data: productsData, setData: setProductsData}}>
       <NavBar />
-      <Context.Provider value={productsData}>
         <Routes>
           <Route path="/" element={<LandingPage sort="WOMEN"/>} />
           <Route path="/men" element={<LandingPage sort="MEN"/>} />

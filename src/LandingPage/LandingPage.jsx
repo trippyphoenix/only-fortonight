@@ -4,8 +4,10 @@ import Context from "../UseContext/Context.js"
 import ProductCard from './ProductCards/ProductCard.jsx'
 
 const LandingPage = ({sort}) => {
-  const data = useContext(Context);
-  const filteredData = data.filter((product)=> product.gender == sort)
+  const data = useContext(Context).data || []; 
+  const filteredData = Array.isArray(data) 
+  ? data.filter((product) => product?.gender === sort)
+  : [];   
   console.log(filteredData);
   return (
     <div className={styles.landingPage}>

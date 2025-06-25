@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import CurrancyDropDown from "./CurrancyDropDown/CurrancyDropDown";
+import Context from "../UseContext/Context.js"
 
 const NavBar = () => {
+	const setData = useContext(Context).setData;
 	return (
 		<div className={styles.navbar}>
 			<div className={styles.navbar_left}>
@@ -36,7 +38,7 @@ const NavBar = () => {
 							fill="none"
 							xmlns="http://www.w3.org/2000/svg"
 						>
-							<g clip-path="url(#clip0_3857_308)">
+							<g clipPath="url(#clip0_3857_308)">
 								<path
 									d="M34.0222 28.6646C34.0494 28.983 33.8009 29.2566 33.4846 29.2566H7.46924C7.15373 29.2566 6.90553 28.9843 6.93156 28.6665L8.7959 5.91227C8.8191 5.62962 9.05287 5.41211 9.33372 5.41211H31.5426C31.8226 5.41211 32.0561 5.62853 32.0801 5.91036L34.0222 28.6646Z"
 									fill="#1DCF65"
@@ -63,8 +65,8 @@ const NavBar = () => {
 									y2="9.9008"
 									gradientUnits="userSpaceOnUse"
 								>
-									<stop stop-color="#52D67A" />
-									<stop offset="1" stop-color="#5AEE87" />
+									<stop stopColor="#52D67A" />
+									<stop offset="1" stopColor="#5AEE87" />
 								</linearGradient>
 								<clipPath id="clip0_3857_308">
 									<rect
@@ -81,7 +83,7 @@ const NavBar = () => {
 			</div>
 			<div className={styles.navbar_right}>
 				<div>
-					<CurrancyDropDown />
+					<CurrancyDropDown setData={setData} />
 				</div>
 				<div>
 					<a href="">

@@ -9,6 +9,7 @@ export const products = [
 		imgAlt: "/images/apollo-side.jpg",
 		sizes: ["XS", "S", "M", "L"],
 		price: 50.0,
+		originalPrice: 50.0,
 		description:
 			"Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
 	},
@@ -21,6 +22,7 @@ export const products = [
 		imgAlt: "/images/athena-side.jpg",
 		sizes: ["S", "M", "L"],
 		price: 65.0,
+		originalPrice: 65.0,
 		description:
 			"Flexible, high-rise yoga pants that support your every move. Made from breathable fabric ideal for workouts or lounging.",
 	},
@@ -33,6 +35,7 @@ export const products = [
 		imgAlt: "/images/iris-back.jpg",
 		sizes: ["XS", "S", "M"],
 		price: 35.0,
+		originalPrice: 35.0,
 		description:
 			"Lightweight tank top with moisture-wicking technology. Perfect for hot yoga or sunny day jogs.",
 	},
@@ -45,6 +48,7 @@ export const products = [
 		imgAlt: "/images/luna-hood.jpg",
 		sizes: ["M", "L"],
 		price: 90.0,
+		originalPrice: 90.0,
 		description:
 			"Stay dry and stylish with this windbreaker featuring adjustable hoods and water-resistant finish.",
 	},
@@ -57,6 +61,7 @@ export const products = [
 		imgAlt: "/images/juno-back.jpg",
 		sizes: ["XS", "S", "M", "L"],
 		price: 40.0,
+		originalPrice: 40.0,
 		description:
 			"Supportive yet comfortable sports bra designed for medium to high impact workouts.",
 	},
@@ -69,6 +74,7 @@ export const products = [
 		imgAlt: "/images/nova-sole.jpg",
 		sizes: ["36", "37", "38", "39", "40"],
 		price: 120.0,
+		originalPrice: 120.0,
 		description:
 			"Lightweight training shoes engineered with responsive cushioning and grip for all terrains.",
 	},
@@ -83,6 +89,7 @@ export const products = [
 		imgAlt: "/images/zion-back.jpg",
 		sizes: ["S", "M", "L", "XL"],
 		price: 45.0,
+		originalPrice: 45.0,
 		description:
 			"Comfortable and durable sport tank made with breathable material. Perfect for workouts, yoga, or casual wear.",
 	},
@@ -95,6 +102,7 @@ export const products = [
 		imgAlt: "/images/thor-back.jpg",
 		sizes: ["M", "L", "XL"],
 		price: 60.0,
+		originalPrice: 60.0,
 		description:
 			"Muscle-enhancing compression shirt with sweat-wicking fabric for optimal performance.",
 	},
@@ -107,6 +115,7 @@ export const products = [
 		imgAlt: "/images/odin-side.jpg",
 		sizes: ["S", "M", "L"],
 		price: 70.0,
+		originalPrice: 70.0,
 		description:
 			"Track pants made with stretch material for ease of movement. Designed for training and casual use.",
 	},
@@ -119,6 +128,7 @@ export const products = [
 		imgAlt: "/images/ares-sole.jpg",
 		sizes: ["40", "41", "42", "43"],
 		price: 130.0,
+		originalPrice: 130.0,
 		description:
 			"Engineered for long-distance runs. Shock-absorbing soles and breathable mesh upper.",
 	},
@@ -131,6 +141,7 @@ export const products = [
 		imgAlt: "/images/helios-hood.jpg",
 		sizes: ["M", "L", "XL"],
 		price: 80.0,
+		originalPrice: 80.0,
 		description:
 			"Classic pullover hoodie with warm inner lining and adjustable drawstring.",
 	},
@@ -143,6 +154,7 @@ export const products = [
 		imgAlt: "/images/kairos-side.jpg",
 		sizes: ["S", "M", "L"],
 		price: 38.0,
+		originalPrice: 38.0,
 		description:
 			"Light and flexible gym shorts with quick-dry technology for intense workouts.",
 	},
@@ -157,6 +169,7 @@ export const products = [
 		imgAlt: "/images/pixel-back.jpg",
 		sizes: ["XS", "S", "M"],
 		price: 25.0,
+		originalPrice: 25.0,
 		description:
 			"Fun and colorful graphic tee made from 100% organic cotton. Great for everyday play.",
 	},
@@ -169,6 +182,7 @@ export const products = [
 		imgAlt: "/images/bolt-cuff.jpg",
 		sizes: ["S", "M", "L"],
 		price: 35.0,
+		originalPrice: 35.0,
 		description:
 			"Durable joggers with elastic waist and cuffs for maximum comfort during activity.",
 	},
@@ -181,6 +195,7 @@ export const products = [
 		imgAlt: "/images/zippy-hood.jpg",
 		sizes: ["M", "L"],
 		price: 45.0,
+		originalPrice: 45.0,
 		description:
 			"Bright and cozy zip hoodie with soft fleece lining to keep kids warm all day.",
 	},
@@ -193,6 +208,7 @@ export const products = [
 		imgAlt: "/images/racer-side.jpg",
 		sizes: ["32", "33", "34", "35"],
 		price: 55.0,
+		originalPrice: 55.0,
 		description:
 			"Sporty sneakers for kids with velcro straps and cushioned soles for active adventures.",
 	},
@@ -205,6 +221,7 @@ export const products = [
 		imgAlt: "/images/tango-back.jpg",
 		sizes: ["XS", "S", "M"],
 		price: 30.0,
+		originalPrice: 30.0,
 		description:
 			"Stylish polo shirt that pairs well with jeans or shorts. Breathable fabric for comfort.",
 	},
@@ -217,6 +234,7 @@ export const products = [
 		imgAlt: "/images/orbit-back.jpg",
 		sizes: ["S", "M", "L"],
 		price: 28.0,
+		originalPrice: 28.0,
 		description:
 			"Colorful swim shorts with quick-dry material and fun prints. Ideal for beach days.",
 	},
