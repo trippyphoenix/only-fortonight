@@ -25,6 +25,7 @@ const CurrencyDropdown = ({ setData }) => {
 			return prevProducts.map((product) => ({
 				...product,
 				price: product.originalPrice * rates[currency.code],
+				currency: currency.code
 			}));
 		});
 	};

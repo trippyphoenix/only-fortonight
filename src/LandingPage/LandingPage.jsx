@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import styles from './LandingPage.module.css'
 import Context from "../UseContext/Context.js"
 import ProductCard from './ProductCards/ProductCard.jsx'
+import { Link } from 'react-router-dom'
 
 const LandingPage = ({sort}) => {
   const data = useContext(Context).data || []; 
@@ -16,9 +17,9 @@ const LandingPage = ({sort}) => {
         </div>
         <div className={styles.productCard_container}>
           {filteredData.map((product)=>(
-            <div key={product.id} className={styles.productCard}>
+            <Link to={`/product/${product.id}`} key={product.id} className={styles.productCard}>
               <ProductCard product={product} />
-            </div>
+            </Link>
           ))}
         </div>
     </div>
