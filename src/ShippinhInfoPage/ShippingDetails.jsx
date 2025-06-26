@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 const ShippingDetails = () => {
    const [errors, setErrors] = useState({});
    const navigate=useNavigate()
-   const {orderInfo,setOrderInfo}=useContext(context)
+   const {setOrderInfo}=useContext(context)
 
   const handleSubmit = (e) => {
     e.preventDefault();
