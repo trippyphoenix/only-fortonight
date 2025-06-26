@@ -7,21 +7,25 @@ const ShippingDetails = () => {
   return (
     <div className={ShippingCss.ShippingInfoContainer}>
       <div className={ShippingCss.ShippingDetailsBox}>
-        <ShippingProgress step="1" />
-        <form action="">
+        <ShippingProgress step={1} />
+        <form className={ShippingCss.detailsForm} action="">
           <label>
-            Contact
-            <input type="text" placeholder="Email or mobile phone number" />
+            <p>Contact</p>
+            <input
+              type="text"
+              placeholder="Email or mobile phone number"
+              style={{ marginBottom: "1.8rem" }}
+            />
             <span className={ShippingCss.required}></span>
           </label>
-          <h2>Shipping Address</h2>
-          <div className="NameInputRow">
+          <p>Shipping Address</p>
+          <div className={ShippingCss.nameInputRow}>
             <div>
               <input type="text" placeholder="First Name" />
               <span className={ShippingCss.required}></span>
             </div>
             <div>
-              <input type="text" placeholder="Second Name" />
+              <input type="text" placeholder="Second Name" required />
               <span className={ShippingCss.required}></span>
             </div>
           </div>
@@ -33,7 +37,7 @@ const ShippingDetails = () => {
             <input type="text" placeholder="Shipping note (optional)" />
             <span className={ShippingCss.required}></span>
           </div>
-          <div className="adressDetails">
+          <div className={ShippingCss.nameInputRow}>
             <div>
               {" "}
               <input type="text" placeholder="City" />
@@ -50,7 +54,7 @@ const ShippingDetails = () => {
             </div>
           </div>
           <AdressComponent placeholder="Country/Region " options={[]} />
-          <div>
+          <div className={ShippingCss.cookies}>
             <input type="checkbox" />
             <span>Save this informations for a future fast checkout</span>
           </div>

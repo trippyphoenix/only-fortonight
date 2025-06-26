@@ -1,10 +1,16 @@
 import React from "react";
 import ShippingCss from "./Shipping.module.css"
-const ShippingProgress = () => {
+const ShippingProgress = ({step}) => {
+  const getColor = (targetStep) => {
+  if (step < targetStep) return "gray";
+  if (step === targetStep) return "black";
+  return "green";
+};
+
   return (
     <div className={ShippingCss.ProgressTrack}>
       <div>
-        <span >Card</span>
+        <span style={{ color: getColor(0) }}>Card</span>
         <svg
           width="6"
           height="10"
@@ -20,7 +26,7 @@ const ShippingProgress = () => {
           />
         </svg>
 
-        <span>Details</span>
+        <span style={  { color: getColor(1) }}>Details</span>
         <svg
           width="6"
           height="10"
@@ -36,7 +42,7 @@ const ShippingProgress = () => {
           />
         </svg>
 
-        <span>Shipping</span>
+        <span style={{ color: getColor(2) }}>Shipping</span>
         <svg
           width="6"
           height="10"
@@ -52,7 +58,7 @@ const ShippingProgress = () => {
           />
         </svg>
 
-        <span>Payment</span>
+        <span style={ { color: getColor(3) } }>Payment</span>
       </div>
     </div>
   );
