@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './lala.module.css'
 import {products} from "../Data/MostProtectedData.js"
 import Context from "../UseContext/Context.js"
-import {Router, Route, Routes } from 'react-router-dom'
+import {Router, Route, Routes, useLocation } from 'react-router-dom'
 
 import NavBar from '../NavBar/NavBar.jsx'
 import LandingPage from '../LandingPage/LandingPage.jsx'
@@ -10,6 +10,18 @@ import ProductPage from '../LandingPage/ProductPage/ProductPage.jsx'
 import ShippingDetails from '../ShippinhInfoPage/ShippingDetails.jsx'
 function App() {
   const [productsData, setProductsData] = useState(products)
+
+  const Layout = ({ children }) => {
+    const location = useLocation();
+    // Define routes where you DON'T want the navbar
+    const noNavbarRoutes = ['shipping/details'];
+    return (
+      <>
+        {!noNavbarRoutes.includes(location.pathname) && <Navbar />}
+        {children}
+      </>
+    );
+  };
 
   return (
     <div>
