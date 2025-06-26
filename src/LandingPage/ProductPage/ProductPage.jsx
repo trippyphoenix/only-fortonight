@@ -59,7 +59,7 @@ const ProductPage = () => {
 					<div className={styles.mainImageContainer}>
 						<img
 							src={currentImage}
-							alt="traki"
+							alt="bottle"
 							className={styles.mainImage}
 							onLoad={handleImageLoad}
 						/>
