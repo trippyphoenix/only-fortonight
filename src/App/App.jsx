@@ -14,12 +14,12 @@ function App() {
   return (
     <div>
       <Context.Provider value={{data: productsData, setData: setProductsData}}>
-      <NavBar />
+      {/* <NavBar /> */}
         <Routes>
-          <Route path="/" element={<LandingPage sort="WOMEN"/>} />
-          <Route path="/men" element={<LandingPage sort="MEN"/>} />
-          <Route path="/kids" element={<LandingPage sort="KIDS"/>} />
-          <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/" element={<><NavBar /> <LandingPage sort="WOMEN"/></>} />
+          <Route path="/men" element={<><NavBar /> <LandingPage sort="MEN"/></>} />
+          <Route path="/kids" element={<><NavBar /> <LandingPage sort="KIDS"/></>} />
+          <Route path="/product/:id" element={<><NavBar /> <ProductPage /></>} />
         </Routes>
       </Context.Provider>
     </div>
