@@ -20,6 +20,7 @@ function App() {
           <Route path="/men" element={<LandingPage sort="MEN"/>} />
           <Route path="/kids" element={<LandingPage sort="KIDS"/>} />
           <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/shipping/details" element={<ShippingDetails/>} />
         </Routes>
       </Context.Provider>
     </div>
