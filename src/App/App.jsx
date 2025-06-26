@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './lala.module.css'
 import {products} from "../Data/MostProtectedData.js"
 import Context from "../UseContext/Context.js"
-import {Router, Route, Routes, useLocation } from 'react-router-dom'
+import {Route, Routes, useLocation , Navigate} from 'react-router-dom'
 
 import NavBar from '../NavBar/NavBar.jsx'
 import LandingPage from '../LandingPage/LandingPage.jsx'
@@ -17,7 +17,7 @@ function App() {
     const noNavbarRoutes = ['shipping/details'];
     return (
       <>
-        {!noNavbarRoutes.includes(location.pathname) && <Navbar />}
+        {!noNavbarRoutes.includes(location.pathname) && <NavBar />}
         {children}
       </>
     );
@@ -28,10 +28,13 @@ function App() {
       <Context.Provider value={{data: productsData, setData: setProductsData}}>
       {/* <NavBar /> */}
         <Routes>
-          <Route path="/" element={<><NavBar /> <LandingPage sort="WOMEN"/></>} />
+          <Route path="/" element={<Navigate to="/women" replace />} />
+          <Route path="/women" element={<><NavBar /> <LandingPage sort="WOMEN"/></>} />
           <Route path="/men" element={<><NavBar /> <LandingPage sort="MEN"/> </>} />
           <Route path="/kids" element={<><NavBar /> <LandingPage sort="KIDS"/> </>} />
-          <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/men/:id" element={<ProductPage />} />
+          <Route path="/kids/:id" element={<ProductPage />} />
+          <Route path="/women/:id" element={<ProductPage />} />
           <Route path="/shipping/details" element={<ShippingDetails/>} />
         </Routes>
       </Context.Provider>

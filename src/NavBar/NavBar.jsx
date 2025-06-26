@@ -11,7 +11,8 @@ const NavBar = () => {
 			<div className={styles.navbar_left}>
 				<NavLink
 					className={({ isActive }) => (isActive ? styles.active : "")}
-					to="/"
+					to="/women"
+					end={false}
 				>
 					WOMEN
 				</NavLink>
@@ -29,7 +30,7 @@ const NavBar = () => {
 				</NavLink>
 			</div>
 			<div className={styles.navbar_logo}>
-				<NavLink to="/">
+				<NavLink to="/women">
 					<div>
 						<svg
 							width="41"
