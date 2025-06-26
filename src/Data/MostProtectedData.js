@@ -22,6 +22,7 @@ export const products = [
 		imgMain: "/images/WOMEN_Yoga_Pants.jpg",
 		ArraysOfImg: ["/images/WOMEN_Yoga_Pants.jpg","/images/WOMEN_Yoga_Pants_2.jpg","/images/WOMEN_Yoga_Pants_3.jpg"],
 		sizes: ["S", "M", "L"],
+		
 		price: 65.0,
 		currency: "USD",
 		originalPrice: 65.0,

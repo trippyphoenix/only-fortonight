@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ShippingCss from "./Shipping.module.css"
-const ShippingFooter = ({ back, goTo, goToText }) => {
+const ShippingFooter = ({ back, goTo, goToText ,handleSubmit}) => {
   return (
     <div className={ShippingCss.ShippingFooter}>
      
       <Link to="/">back to {back}</Link>
-      <Link to="/"><span>{goToText}</span></Link>
+      <button type="submit">{goToText}</button>
     </div>
   );
 };

@@ -10,14 +10,14 @@ import ProductPage from '../LandingPage/ProductPage/ProductPage.jsx'
 import ShippingDetails from '../ShippinhInfoPage/ShippingDetails.jsx'
 function App() {
   const [productsData, setProductsData] = useState(products)
-
+  const [orderInfo,setOrderInfo]=useState({})
   const Layout = ({ children }) => {
     const location = useLocation();
     // Define routes where you DON'T want the navbar
     const noNavbarRoutes = ['shipping/details'];
     return (
       <>
-        {!noNavbarRoutes.includes(location.pathname) && <Navbar />}
+        {!noNavbarRoutes.includes(location.pathname) && <NavBar />}
         {children}
       </>
     );
@@ -25,7 +25,7 @@ function App() {
 
   return (
     <div>
-      <Context.Provider value={{data: productsData, setData: setProductsData}}>
+      <Context.Provider value={{data: productsData, setData: setProductsData,orderInfo:orderInfo,setOrderInfo:setOrderInfo}}>
       {/* <NavBar /> */}
         <Routes>
           <Route path="/" element={<><NavBar /> <LandingPage sort="WOMEN"/></>} />
