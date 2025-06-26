@@ -5,9 +5,9 @@ const CurrencyDropdown = ({ setData }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [selected, setSelected] = useState({ symbol: "$", code: "USD" });
 	const currencies = [
-		{ symbol: "$", code: "USD", currency: 3 },
-		{ symbol: "€", code: "EUR", currency: 1 },
-		{ symbol: "¥", code: "JPY", currency: 145 },
+		{ symbol: "$", code: "USD" },
+		{ symbol: "€", code: "EUR" },
+		{ symbol: "¥", code: "JPY" },
 	];
 	const handleSelect = (currency) => {
 		console.log(currency);
@@ -18,7 +18,7 @@ const CurrencyDropdown = ({ setData }) => {
 			// Define conversion rates (adjust these values as needed)
 			const rates = {
 				USD: 1, // Base currency
-				EUR: 3.2, // 1 USD = 0.85 EUR
+				EUR: 1.2, // 1 USD = 0.85 EUR
 				JPY: 145, // 1 USD = 110 JPY
 			};
 
