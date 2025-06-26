@@ -7,7 +7,7 @@ import {Router, Route, Routes } from 'react-router-dom'
 import NavBar from '../NavBar/NavBar.jsx'
 import LandingPage from '../LandingPage/LandingPage.jsx'
 import ProductPage from '../LandingPage/ProductPage/ProductPage.jsx'
-
+import ShippingDetails from '../ShippinhInfoPage/ShippingDetails.jsx'
 function App() {
   const [productsData, setProductsData] = useState(products)
 
@@ -16,10 +16,10 @@ function App() {
       <Context.Provider value={{data: productsData, setData: setProductsData}}>
       {/* <NavBar /> */}
         <Routes>
-          <Route path="/" element={<><NavBar /> <LandingPage sort="WOMEN"/></>} />
-          <Route path="/men" element={<><NavBar /> <LandingPage sort="MEN"/></>} />
-          <Route path="/kids" element={<><NavBar /> <LandingPage sort="KIDS"/></>} />
-          <Route path="/product/:id" element={<><NavBar /> <ProductPage /></>} />
+          <Route path="/" element={<LandingPage sort="WOMEN"/>} />
+          <Route path="/men" element={<LandingPage sort="MEN"/>} />
+          <Route path="/kids" element={<LandingPage sort="KIDS"/>} />
+          <Route path="/product/:id" element={<ProductPage />} />
         </Routes>
       </Context.Provider>
     </div>
