@@ -1,7 +1,101 @@
-*{
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0;
-
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+.ProgressTrack {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.ProgressTrack span {
+  padding: 0 0.3rem;
+}
+.detailsForm label {
+  font: Roboto;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25.6px;
+  letter-spacing: -0.9px;
+  display: flex;
+  flex-direction: column;
+}
+.ShippingDetailsBox {
+  width: 50%;
+}
+.ShippingDetailsBox p {
+  font: Roboto;
+  font-weight: 550;
+  font-size: 20px;
+  line-height: 25.6px;
+  margin-bottom: 1rem;
 }
 
+
+.ShippingDetailsBox input {
+  width: 100%;
+  height: 40px;
+  border: 0.5px solid #b7b7b7;
+  background-color: white;
+   padding: 0.75rem;
+}
+
+.nameInputRow>div {
+  flex: 1;
+  position: relative;
+}
+
+
+.nameInput:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+.nameInputRow {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.required {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ef4444;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Optional: Error state */
+.nameInput .error {
+  border-color: #ef4444;
+}
+.detailsForm>div {
+     margin:0.8rem  0
+}
+.cookies{
+    display: flex;
+    width: 100%;
+    align-items: center;
+   justify-content: ;
+}
+.cookies input{
+    width: 1rem;
+    margin-right:5px;
+    color: white;
+}
+    .ShippingFooter{
+        display: flex;
+        justify-content: space-between;
+    }
+    .ShippingFooter a:first-of-type{
+        color: green;
+        text-decoration: underline;
+    }
+    .ShippingFooter span{
+        padding: 0.6rem 1.5rem;
+        color: white;
+        background-color: green;
+        border-radius: 5px;
+
+    }
