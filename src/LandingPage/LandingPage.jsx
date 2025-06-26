@@ -3,6 +3,7 @@ import styles from './LandingPage.module.css'
 import Context from "../UseContext/Context.js"
 import ProductCard from './ProductCards/ProductCard.jsx'
 import { Link } from 'react-router-dom'
+import NavBar from '../NavBar/NavBar.jsx'
 
 const LandingPage = ({sort}) => {
   const data = useContext(Context).data || []; 

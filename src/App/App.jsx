@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './lala.module.css'
 import {products} from "../Data/MostProtectedData.js"
 import Context from "../UseContext/Context.js"
-import {Router, Route, Routes } from 'react-router-dom'
+import {Router, Route, Routes, useLocation } from 'react-router-dom'
 
 import NavBar from '../NavBar/NavBar.jsx'
 import LandingPage from '../LandingPage/LandingPage.jsx'
@@ -11,16 +11,28 @@ import ShippingDetails from '../ShippinhInfoPage/ShippingDetails.jsx'
 function App() {
   const [productsData, setProductsData] = useState(products)
 
+  const Layout = ({ children }) => {
+    const location = useLocation();
+    // Define routes where you DON'T want the navbar
+    const noNavbarRoutes = ['shipping/details'];
+    return (
+      <>
+        {!noNavbarRoutes.includes(location.pathname) && <Navbar />}
+        {children}
+      </>
+    );
+  };
+
   return (
     <div>
       <Context.Provider value={{data: productsData, setData: setProductsData}}>
       {/* <NavBar /> */}
         <Routes>
-          <Route path="/" element={<><NavBar /><LandingPage sort="WOMEN"/></>} />
-          <Route path="/men" element={<LandingPage sort="MEN"/>} />
-          <Route path="/kids" element={<LandingPage sort="KIDS"/>} />
+          <Route path="/" element={<><NavBar /> <LandingPage sort="WOMEN"/></>} />
+          <Route path="/men" element={<><NavBar /> <LandingPage sort="MEN"/> </>} />
+          <Route path="/kids" element={<><NavBar /> <LandingPage sort="KIDS"/> </>} />
           <Route path="/product/:id" element={<ProductPage />} />
-          <Route path="/shipping/details" element={<ShippingDetails/>}></Route>
+          <Route path="/shipping/details" element={<ShippingDetails/>} />
         </Routes>
       </Context.Provider>
     </div>
