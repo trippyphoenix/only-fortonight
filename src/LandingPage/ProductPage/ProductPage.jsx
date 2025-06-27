@@ -44,9 +44,8 @@ const ProductPage = () => {
 				{/* Thumbnails Sidebar */}
 				<div className={styles.thumbnailsSidebar}>
 					{product.ArraysOfImg.map((image, index) => (
-						<div className={styles.thumbnailContainer}>
+						<div className={styles.thumbnailContainer} key={index}>
 							<img
-								key={index}
 								src={image}
 								alt="opps"
 								onClick={() => handleThumbnailClick(index)}
@@ -84,9 +83,9 @@ const ProductPage = () => {
 
 									{/* Size Options */}
 									<div className={styles.sizeOptions}>
-										{product.sizes.map((sizes) => (
+										{product.sizes.map((sizes,index) => (
 											<button
-												key={sizes}
+												key={index}
 												onClick={() => handleSizeSelect(sizes.size)}
 												className={styles.sizeOption}
 												data-selected={selectedSize === sizes.size}

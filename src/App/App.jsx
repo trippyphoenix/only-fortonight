@@ -2,132 +2,121 @@ import { useState } from "react";
 import "./lala.module.css";
 import { products } from "../Data/MostProtectedData.js";
 import Context from "../UseContext/Context.js";
-import { Router, Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 
 import NavBar from "../NavBar/NavBar.jsx";
 import LandingPage from "../LandingPage/LandingPage.jsx";
 import ProductPage from "../LandingPage/ProductPage/ProductPage.jsx";
 import ShippingDetails from "../ShippinhInfoPage/ShippingDetails.jsx";
 function App() {
-  const [productsData, setProductsData] = useState(products);
-  const [orderInfo, setOrderInfo] = useState({});
-  const [cartItems, setCartItems] = useState([]);
- const additionToCard = (selectedSize, product, change) => {
-  console.log(cartItems);
-  
-  const selectedStock = product.sizes.find(s => s.size === selectedSize);
+	const [productsData, setProductsData] = useState(products);
+	const [orderInfo, setOrderInfo] = useState({});
+	const [cartItems, setCartItems] = useState([]);
+	const additionToCard = (selectedSize, product, change) => {
+		console.log(cartItems);
 
-  const maxStock = selectedStock.stock;
+		const selectedStock = product.sizes.find((s) => s.size === selectedSize);
 
-  setCartItems(prev => {
-    const existingProduct = prev.find(item => item.id === product.id);
+		const maxStock = selectedStock.stock;
 
-    if (existingProduct) {
-      const currentQty = existingProduct.sizeQuantities[selectedSize] || 0;
+		setCartItems((prev) => {
+			const existingProduct = prev.find((item) => item.id === product.id);
 
-      return prev.map(item => {
-        if (item.id !== product.id) return item;
+			if (existingProduct) {
+				const currentQty = existingProduct.sizeQuantities[selectedSize] || 0;
 
-        let updatedQty = currentQty;
+				return prev.map((item) => {
+					if (item.id !== product.id) return item;
 
-        if (change === "increase") {
-          if (currentQty >= maxStock) {
-            alert("Stock limit reached for this size");
-            return item;
-          }
-          updatedQty = currentQty + 1;
-        } else if (change === "decrease") {
-          updatedQty = Math.max(currentQty - 1, 0);
-        } else {
-          return item; // ignore unknown change types
-        }
+					let updatedQty = currentQty;
 
-        return {
-          ...item,
-          sizeQuantities: {
-            ...item.sizeQuantities,
-            [selectedSize]: updatedQty
-          }
-        };
-      });
-    }
+					if (change === "increase") {
+						if (currentQty >= maxStock) {
+							alert("Stock limit reached for this size");
+							return item;
+						}
+						updatedQty = currentQty + 1;
+					} else if (change === "decrease") {
+						updatedQty = Math.max(currentQty - 1, 0);
+					} else {
+						return item; // ignore unknown change types
+					}
 
-    // Product not in cart yet → add only if increasing
-    if (change === "increase") {
-      return [
-        ...prev,
-        {
-          ...product,
-          sizeQuantities: {
-            [selectedSize]: 1
-          }
-        }
-      ];
-    }
+					return {
+						...item,
+						sizeQuantities: {
+							...item.sizeQuantities,
+							[selectedSize]: updatedQty,
+						},
+					};
+				});
+			}
 
-    // Don't add anything if trying to decrease a non-existing product
-    return prev;
-  });
-};
+			// Product not in cart yet → add only if increasing
+			if (change === "increase") {
+				return [
+					...prev,
+					{
+						...product,
+						sizeQuantities: {
+							[selectedSize]: 1,
+						},
+					},
+				];
+			}
 
+			// Don't add anything if trying to decrease a non-existing product
+			return prev;
+		});
+	};
 
-
-  const Layout = ({ children }) => {
-    const location = useLocation();
-    // Define routes where you DON'T want the navbar
-    const noNavbarRoutes = ["shipping/details"];
-    return (
-      <>
-        {!noNavbarRoutes.includes(location.pathname) && <NavBar />}
-        {children}
-      </>
-    );
-  };
-
-  return (
-    <div>
-      <Context.Provider
-        value={{
-          data: productsData,
-          setData: setProductsData,
-          orderInfo: orderInfo,
-          setOrderInfo: setOrderInfo,
-          cartItems: cartItems,
-          additionToCard:additionToCard
-        }}
-      >
-        {/* <NavBar /> */}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <NavBar /> <LandingPage sort="WOMEN" />
-              </>
-            }
-          />
-          <Route
-            path="/men"
-            element={
-              <>
-                <NavBar /> <LandingPage sort="MEN" />{" "}
-              </>
-            }
-          />
-          <Route
-            path="/kids"
-            element={
-              <>
-                <NavBar /> <LandingPage sort="KIDS" />{" "}
-              </>
-            }
-          />
-          <Route path="/product/:id" element={<ProductPage />} />
-          <Route path="/shipping/details" element={<ShippingDetails />} />
-        </Routes>
-      </Context.Provider>
-    </div>
-  );
+	return (
+		<div>
+			<Context.Provider
+				value={{
+					data: productsData,
+					setData: setProductsData,
+					orderInfo: orderInfo,
+					setOrderInfo: setOrderInfo,
+					cartItems: cartItems,
+					additionToCard: additionToCard,
+				}}
+			>
+				{/* <NavBar /> */}
+				<Routes>
+          <Route path="/" element={<Navigate to="/women" replace />} />
+					<Route
+						path="/women"
+						element={
+							<>
+								<NavBar /> <LandingPage sort="WOMEN" />
+							</>
+						}
+					/>
+					<Route
+						path="/men"
+						element={
+							<>
+								<NavBar /> <LandingPage sort="MEN" />{" "}
+							</>
+						}
+					/>
+					<Route
+						path="/kids"
+						element={
+							<>
+								<NavBar /> <LandingPage sort="KIDS" />{" "}
+							</>
+						}
+					/>
+					<Route path="/women/:id" element={<ProductPage />} />
+					<Route path="/men/:id" element={<ProductPage />} />
+					<Route path="/kids/:id" element={<ProductPage />} />
+					<Route path="/shipping/details" element={<ShippingDetails />} />
+				</Routes>
+			</Context.Provider>
+		</div>
+	);
 }
 
 export default App;
