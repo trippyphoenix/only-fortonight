@@ -2,19 +2,19 @@ import React, { useState,useContext } from "react";
 import styles from "../LandingPage/ProductPage/ProductPage.module.css";
 import cartStyles from "./CartStyles.module.css"
 const CartItem = ({ product }) => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(product.imgMain);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedSize, setSelectedSize] = useState(product.sizes[0].size);
-  const { additionToCard } = useContext(Context);
+  const { additionToCard,currentCurrency } = useContext(Context);
 
   const handleSizeSelect = (size) => {
     setSelectedSize(size);
   };
   const handleImageSwap=(direction)=>{
     if(direction=="right"){
-        currentImageIndex<product.ArraysOfImg.lenght-1 ? setCurrentImageIndex(currentImageIndex+1):setCurrentImageIndex(0) 
+        currentImageIndex<product.ArraysOfImg.length-1 ? setCurrentImageIndex(currentImageIndex+1):setCurrentImageIndex(0) 
     }else{
-        currentImageIndex<product.ArraysOfImg.lenght>0 ? setCurrentImageIndex(currentImageIndex-1):setCurrentImageIndex(product.ArraysOfImg.lenght-1) 
+        currentImageIndex<product.ArraysOfImg.length>0 ? setCurrentImageIndex(currentImageIndex-1):setCurrentImageIndex(product.ArraysOfImg.lenght-1) 
     }
 
   }
@@ -29,7 +29,7 @@ const CartItem = ({ product }) => {
         <div className={styles.priceContainer}>
           <span>PRICE:</span>
           <p className={styles.price}>
-            {symbols[product.currency] + product.price + ".00"}
+            {currentCurrency + product.price + ".00"}
           </p>
         </div>
         <div className={styles.sizeContainer}>
