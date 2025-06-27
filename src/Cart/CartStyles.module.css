@@ -8,20 +8,21 @@
 }
 
 .right img{
-    height: 200px;
+    height: 250px;
 }
 .cartManipulation {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 8px;
+
 }
 
 .cartManipulation button {
-  width: 24px;
-  height: 24px;
+  width: 1.7rem;
+  height: 1.7rem;
   border: 1px solid #d3d3d3;
   background: none;
   cursor: pointer;

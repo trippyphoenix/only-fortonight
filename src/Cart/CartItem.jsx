@@ -2,7 +2,7 @@ import React, { useState,useContext } from "react";
 import styles from "../LandingPage/ProductPage/ProductPage.module.css";
 import cartStyles from "./CartStyles.module.css"
 import Context from "../UseContext/Context";
-const CartItem = ({ product }) => {
+const CartItem = ({ product,fontSize="",imgHeight }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedSize, setSelectedSize] = useState(product.sizes[0].size);
@@ -21,15 +21,15 @@ const CartItem = ({ product }) => {
   }
   const chosenSizeQuantity=product.sizeQuantities[selectedSize] || 0
   return (
-    <div className={cartStyles.itemContainer}>
-      <div className={styles.upperInfo}>
+    <div className={cartStyles.itemContainer} >
+      <div className={styles.upperInfo} style={fontSize ? { fontSize: fontSize } : {}}>
         <div>
-          <p className={styles.productName}>{product.name}</p>
-          <p className={styles.productType}>{product.type}</p>
+          <p className={styles.productName} style={fontSize ? { fontSize: fontSize } : {}} >{product.name}</p>
+          <p className={styles.productType} style={fontSize ? { fontSize: fontSize } : {}}>{product.type}</p>
         </div>
         <div className={styles.priceContainer}>
-          <span>PRICE:</span>
-          <p className={styles.price}>
+          <span style={fontSize ? { fontSize: fontSize } : {}}>PRICE:</span>
+          <p className={styles.price} style={fontSize ? { fontSize: fontSize } : {}}>
             {currentCurrency + product.price + ".00"}
           </p>
         </div>
@@ -37,13 +37,13 @@ const CartItem = ({ product }) => {
           <div className="">
             {/* Size Label */}
             <div className="">
-              <span className={styles.sizeLabel}>SIZE:</span>
+              <span className={styles.sizeLabel} style={fontSize ? { fontSize: fontSize } : {}}>SIZE:</span>
             </div>
 
             {/* Size Options */}
-            <div className={styles.sizeOptions}>
+            <div className={styles.sizeOptions} >
               {product.sizes.map((sizes) => (
-                <button
+                <button style={fontSize ? { fontSize: fontSize } : {}}
                   key={sizes}
                   onClick={() => handleSizeSelect(sizes.size)}
                   className={styles.sizeOption}
@@ -62,7 +62,7 @@ const CartItem = ({ product }) => {
           <p>{chosenSizeQuantity}</p>
           <button onClick={() => additionToCard(selectedSize,product,'decrease')}>-</button>
         </div>
-        <div className={cartStyles.imageInCart}> <img src={product.ArraysOfImg[currentImageIndex]} alt="" /></div>
+        <div className={cartStyles.imageInCart} style={imgHeight ? { height: imgHeight } : {}}> <img src={product.ArraysOfImg[currentImageIndex]} alt="" /></div>
       </div>
     </div>
   );
