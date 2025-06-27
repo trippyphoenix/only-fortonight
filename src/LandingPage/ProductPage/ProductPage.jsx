@@ -15,7 +15,7 @@ const ProductPage = () => {
 	};
 
 	// functionality
-	const [currentImageIndex, setCurrentImageIndex] = useState(product.imgMain);
+	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 	const [isLoading, setIsLoading] = useState(false);
 	const [selectedSize, setSelectedSize] = useState(product.sizes[0].size);
 	const {additionToCard}=useContext(Context)
@@ -56,8 +56,9 @@ const ProductPage = () => {
 						</div>
 					))}
 				</div>
+				
 				<div className={styles.mainImageHolder}>
-					<div className={styles.mainImageContainer}>
+					<div>
 						<img
 							src={currentImage}
 							alt="bottle"
