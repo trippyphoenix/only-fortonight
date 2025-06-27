@@ -1,0 +1,32 @@
+/* cartStyles.module.css */
+.itemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.right img{
+    height: 200px;
+}
+.cartManipulation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-around;
+  margin-top: 8px;
+}
+
+.cartManipulation button {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #d3d3d3;
+  background: none;
+  cursor: pointer;
+}
+.right{
+    display: flex;
+}
+

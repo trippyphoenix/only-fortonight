@@ -21,7 +21,7 @@ const CartItem = ({ product }) => {
   }
   const chosenSizeQuantity=product.sizeQuantities[selectedSize] || 0
   return (
-    <div>
+    <div className={cartStyles.itemContainer}>
       <div className={styles.upperInfo}>
         <div>
           <p className={styles.productName}>{product.name}</p>
@@ -56,13 +56,13 @@ const CartItem = ({ product }) => {
           </div>
         </div>
       </div>
-      <div>
+      <div className={cartStyles.right}>
         <div className={cartStyles.cartManipulation}>
           <button onClick={() =>  additionToCard(selectedSize,product,'increase')}>+</button>
           <p>{chosenSizeQuantity}</p>
           <button onClick={() => additionToCard(selectedSize,product,'decrease')}>-</button>
         </div>
-        <div className={cartStyles.imageInCart}> {product.ArraysOfImg[currentImageIndex]}</div>
+        <div className={cartStyles.imageInCart}> <img src={product.ArraysOfImg[currentImageIndex]} alt="" /></div>
       </div>
     </div>
   );
