@@ -1,6 +1,7 @@
 import React, { useState,useContext } from "react";
 import styles from "../LandingPage/ProductPage/ProductPage.module.css";
 import cartStyles from "./CartStyles.module.css"
+import Context from "../UseContext/Context";
 const CartItem = ({ product }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);

@@ -89,7 +89,7 @@ const NavBar = () => {
 					<CurrancyDropDown setData={setData} />
 				</div>
 				<div onClick={()=>navigate("/CartPage")}>
-					<a href="" >
+					
 						<svg
 							width="20"
 							height="20"
@@ -110,7 +110,7 @@ const NavBar = () => {
 								fill="#43464E"
 							/>
 						</svg>
-					</a>
+				
 				</div>
 			</div>
 		</div>
