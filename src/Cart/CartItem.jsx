@@ -62,7 +62,7 @@ const CartItem = ({ product }) => {
           <p>{chosenSizeQuantity}</p>
           <button onClick={() => additionToCard(selectedSize,product,'decrease')}>-</button>
         </div>
-        <div className={cartStyles.imageInCart}></div>
+        <div className={cartStyles.imageInCart}> {product.ArraysOfImg[currentImageIndex]}</div>
       </div>
     </div>
   );
