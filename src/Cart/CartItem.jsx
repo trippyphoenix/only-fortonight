@@ -14,7 +14,7 @@ const CartItem = ({ product }) => {
     }else{
         currentImageIndex<product.ArraysOfImg.lenght>0 ? setCurrentImageIndex(currentImageIndex-1):setCurrentImageIndex(product.ArraysOfImg.lenght-1) 
     }
-    
+
   }
   const chosenSizeQuantity=product.sizeQuantities[selectedSize] || 0
   return (
@@ -55,9 +55,9 @@ const CartItem = ({ product }) => {
       </div>
       <div>
         <div className={cartStyles.cartManipulation}>
-          <button onClick={() => additionToCart(selectedSize,product,'increase')}>+</button>
+          <button onClick={() =>  additionToCard(selectedSize,product,'increase')}>+</button>
           <p>{chosenSizeQuantity}</p>
-          <button onClick={() => additionToCart(selectedSize,product,'decrease')}>-</button>
+          <button onClick={() => additionToCard(selectedSize,product,'decrease')}>-</button>
         </div>
         <div className={cartStyles.imageInCart}></div>
       </div>

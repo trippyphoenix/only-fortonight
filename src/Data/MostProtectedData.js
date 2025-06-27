@@ -1,4 +1,4 @@
-export const products = [
+  const products = [
 	// WOMEN
 	{
 		id: 1,
@@ -309,3 +309,4 @@ export const products = [
 			"Colorful swim shorts with quick-dry material and fun prints. Ideal for beach days.",
 	},
 ];
+export default products
