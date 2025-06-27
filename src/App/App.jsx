@@ -8,6 +8,8 @@ import NavBar from "../NavBar/NavBar.jsx";
 import LandingPage from "../LandingPage/LandingPage.jsx";
 import ProductPage from "../LandingPage/ProductPage/ProductPage.jsx";
 import ShippingDetails from "../ShippinhInfoPage/ShippingDetails.jsx";
+import ShipingPayment from "../ShippinhInfoPage/ShipingPayment.jsx";
+
 function App() {
 	const [productsData, setProductsData] = useState(products);
 	const [orderInfo, setOrderInfo] = useState({});
@@ -113,6 +115,8 @@ function App() {
 					<Route path="/men/:id" element={<ProductPage />} />
 					<Route path="/kids/:id" element={<ProductPage />} />
 					<Route path="/shipping/details" element={<ShippingDetails />} />
+					<Route path="/shiping/payment" element={<ShipingPayment />}/>
+
 				</Routes>
 			</Context.Provider>
 		</div>
