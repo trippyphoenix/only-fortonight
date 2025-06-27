@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-
+import React, { useState,useContext } from "react";
+import styles from "../LandingPage/ProductPage/ProductPage.module.css";
+import cartStyles from "./CartStyles.module.css"
 const CartItem = ({ product }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(product.imgMain);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedSize, setSelectedSize] = useState(product.sizes[0].size);
   const { additionToCard } = useContext(Context);
+
   const handleSizeSelect = (size) => {
     setSelectedSize(size);
   };

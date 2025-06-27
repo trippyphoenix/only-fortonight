@@ -3,9 +3,11 @@ import styles from "./NavBar.module.css";
 import { NavLink } from "react-router-dom";
 import CurrancyDropDown from "./CurrancyDropDown/CurrancyDropDown";
 import Context from "../UseContext/Context.js"
+import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
 	const setData = useContext(Context).setData;
+	const navigate=useNavigate()
 	return (
 		<div className={styles.navbar}>
 			<div className={styles.navbar_left}>
@@ -31,7 +33,7 @@ const NavBar = () => {
 			</div>
 			<div className={styles.navbar_logo}>
 				<NavLink to="/women">
-					<div>
+					<div >
 						<svg
 							width="41"
 							height="41"
@@ -86,8 +88,8 @@ const NavBar = () => {
 				<div>
 					<CurrancyDropDown setData={setData} />
 				</div>
-				<div>
-					<a href="">
+				<div onClick={()=>navigate("/CartPage")}>
+					<a href="" >
 						<svg
 							width="20"
 							height="20"
