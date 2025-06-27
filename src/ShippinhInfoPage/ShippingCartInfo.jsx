@@ -1,18 +1,7 @@
 
 import { useContext } from "react";
 const ShippingCartInfo = ({ backGroundColor, shipping }) => {
-  const { cartItems } = useContext(Context);
-  let totalPrice = 0;
-
-  for (const item of cartItems) {
-    let itemQuantity = 0;
-
-    for (const size in item.sizeQuantities) {
-      itemQuantity += item.sizeQuantities[size];
-    }
-
-    totalPrice += itemQuantity * item.price;
-  }
+  const { totalPrice,currentCurrency}=useContext(Context)
     const GrandTotal = Number(shipping)
     ? totalPrice + Number(shipping)
     : totalPrice;
@@ -21,7 +10,7 @@ const ShippingCartInfo = ({ backGroundColor, shipping }) => {
       <div>
         <div>
           <span>Subtotal</span>
-          <span>{totalPrice}</span>
+          <span>{currentCurrency}{totalPrice}</span>
         </div>
         <div>
           <span>Shipping</span>
@@ -30,7 +19,7 @@ const ShippingCartInfo = ({ backGroundColor, shipping }) => {
       </div>
       <div>
         <span>Total</span>
-        <span>{GrandTotal}</span>
+        <span>{currentCurrency}{GrandTotal}</span>
       </div>
     </div>
   );
