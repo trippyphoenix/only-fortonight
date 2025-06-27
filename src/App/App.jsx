@@ -8,6 +8,7 @@ import NavBar from "../NavBar/NavBar.jsx";
 import LandingPage from "../LandingPage/LandingPage.jsx";
 import ProductPage from "../LandingPage/ProductPage/ProductPage.jsx";
 import ShippingDetails from "../ShippinhInfoPage/ShippingDetails.jsx";
+import ShipingPayment from "../ShippinhInfoPage/ShipingPayment.jsx";
 import { useMemo } from "react";
 import CartPage from "../Cart/CartPage.jsx";
 function App() {
@@ -90,7 +91,7 @@ function App() {
 
     return { totalPrice, totalQuantity,currentCurrency:symbols[cartItems[0]?.currency]};
   }, [cartItems]);
-
+// hope it merged well
   return (
     <div>
       <Context.Provider
@@ -109,41 +110,42 @@ function App() {
         {/* <NavBar /> */}
         <Routes>
           <Route path="/" element={<Navigate to="/women" replace />} />
-          <Route
-            path="/women"
-            element={
-              <>
-                <NavBar /> <LandingPage sort="WOMEN" />
-              </>
-            }
-          />
-          <Route
-            path="/men"
-            element={
-              <>
-                <NavBar /> <LandingPage sort="MEN" />{" "}
-              </>
-            }
-          />
-          <Route
-            path="/kids"
-            element={
-              <>
-                <NavBar /> <LandingPage sort="KIDS" />{" "}
-              </>
-            }
-          />
-          <Route path="/women/:id" element={<ProductPage />} />
-          <Route path="/men/:id" element={<ProductPage />} />
-          <Route path="/kids/:id" element={<ProductPage />} />
-          <Route path="/shipping/details" element={<ShippingDetails />} />
+					<Route
+						path="/women"
+						element={
+							<>
+								<NavBar /> <LandingPage sort="WOMEN" />
+							</>
+						}
+					/>
+					<Route
+						path="/men"
+						element={
+							<>
+								<NavBar /> <LandingPage sort="MEN" />{" "}
+							</>
+						}
+					/>
+					<Route
+						path="/kids"
+						element={
+							<>
+								<NavBar /> <LandingPage sort="KIDS" />{" "}
+							</>
+						}
+					/>
+					<Route path="/women/:id" element={<ProductPage />} />
+					<Route path="/men/:id" element={<ProductPage />} />
+					<Route path="/kids/:id" element={<ProductPage />} />
+					<Route path="/shipping/details" element={<ShippingDetails />} />
+					<Route path="/shiping/payment" element={<ShipingPayment />}/>
           <Route path="/CartPage" element={ <>
                 <NavBar /> <CartPage />{" "}
               </>}></Route>
-        </Routes>
-      </Context.Provider>
-    </div>
-  );
+				</Routes>
+			</Context.Provider>
+		</div>
+	);
 }
 
 export default App;

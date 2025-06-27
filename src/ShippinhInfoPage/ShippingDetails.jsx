@@ -6,6 +6,7 @@ import AdressComponent from "./AdressComponent";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ShippingCartInfo from "./ShippingCartInfo";
+
 const ShippingDetails = () => {
    const [errors, setErrors] = useState({});
    const navigate=useNavigate()
