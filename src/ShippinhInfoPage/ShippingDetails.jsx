@@ -5,6 +5,7 @@ import ShippingCss from "./Shipping.module.css";
 import AdressComponent from "./AdressComponent";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ShippingCartInfo from "./ShippingCartInfo";
 const ShippingDetails = () => {
    const [errors, setErrors] = useState({});
    const navigate=useNavigate()
@@ -104,6 +105,7 @@ const ShippingDetails = () => {
           />
         </form>
       </div>
+      <ShippingCartInfo backGroundColor="white" shipping="Calculated at next Step"  ></ShippingCartInfo>
     </div>
   );
 };

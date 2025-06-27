@@ -8,9 +8,16 @@ export const products = [
 		imgMain: "/images/WOMEN_running_shorts.jpg",
 		ArraysOfImg: ["/images/WOMEN_running_shorts.jpg","/images/WOMEN_Running_Short_2.jpg","/images/WOMEN_Running_Short_3.jpg"],
 		sizes: ["XS", "S", "M", "L"],
+		sizes: [
+			  { size: "XS", stock: 10 },
+    { size: "S", stock: 10 },
+    { size: "M", stock: 5 },
+    { size: "L", stock: 0 }
+  ],
 		price: 50.0,
 		currency: "USD",
 		originalPrice: 50.0,
+	
 		description:
 			"Find stunning women's cocktail dresses and party dresses. Stand out in lace and metallic cocktail dresses and party dresses from all your favorite brands.",
 	},
@@ -21,7 +28,10 @@ export const products = [
 		type: "Yoga Pants",
 		imgMain: "/images/WOMEN_Yoga_Pants.jpg",
 		ArraysOfImg: ["/images/WOMEN_Yoga_Pants.jpg","/images/WOMEN_Yoga_Pants_2.jpg","/images/WOMEN_Yoga_Pants_3.jpg"],
-		sizes: ["S", "M", "L"],
+		sizes: [    { size: "S", stock: 10 },
+    { size: "M", stock: 5 },
+    { size: "L", stock: 0 }],
+		
 		
 		price: 65.0,
 		currency: "USD",
@@ -36,7 +46,10 @@ export const products = [
 		type: "Tank Top",
 		imgMain: "/images/WOMEN_Tank_Top_.jpg",
 		ArraysOfImg: ["/images/WOMEN_Tank_Top_.jpg","/images/WOMEN_Tank_Top_2.jpg","/images/WOMEN_Tank_Top_3.jpg"],
-		sizes: ["XS", "S", "M"],
+		sizes: [
+		    { size: "XS", stock: 10 },
+    { size: "S", stock: 5 },
+    { size: "M", stock: 9}],
 		price: 35.0,
 		currency: "USD",
 		originalPrice: 35.0,
@@ -50,10 +63,13 @@ export const products = [
 		type: "Windbreaker Jacket",
 		imgMain: "/images/WOEMN_Windbreaker_Jacket.jpg",
 		ArraysOfImg: ["/images/WOEMN_Windbreaker_Jacket.jpg","/images/WOEMN_Windbreaker_Jacket_2.jpg","/images/WOEMN_Windbreaker_Jacket_3.jpg"],
-		sizes: ["M", "L"],
+		sizes: [
+    { size: "M", stock: 5 },
+    { size: "L", stock: 10 }],
 		price: 90.0,
 		currency: "USD",
 		originalPrice: 90.0,
+	
 		description:
 			"Stay dry and stylish with this windbreaker featuring adjustable hoods and water-resistant finish.",
 	},
@@ -64,7 +80,11 @@ export const products = [
 		type: "Sports Bra",
 		imgMain: "/images/WOMEN_Sports_Bra.jpg",
 		ArraysOfImg: ["/images/WOMEN_Sports_Bra.jpg","/images/WOMEN_Sports_Bra_2.jpg","/images/WOMEN_Sports_Bra_3.jpg"],
-		sizes: ["XS", "S", "M", "L"],
+		sizes: [
+		{ size: "XS", stock: 10 },
+		    { size: "S", stock: 10 },
+    { size: "M", stock: 5 },
+    { size: "L", stock: 0 }],
 		price: 40.0,
 		currency: "USD",
 		originalPrice: 40.0,
@@ -78,7 +98,12 @@ export const products = [
 		type: "Training Shoes",
 		imgMain: "/images/WOMEN_Training_Shoes.jpg",
 		ArraysOfImg: ["/images/WOMEN_Training_Shoes.jpg","/images/WOMEN_Training_Shoes_2.jpg","/images/WOMEN_Training_Shoes_3.jpg"],
-		sizes: ["36", "37", "38", "39", "40"],
+		sizes: [
+		{ size: "36", stock: 10 },
+		{ size: "37", stock: 10 },
+		{ size: "38", stock: 10 },
+		{ size: "39", stock: 10 },
+		{ size: "40", stock: 10 }],
 		price: 120.0,
 		currency: "USD",
 		originalPrice: 120.0,
@@ -94,7 +119,8 @@ export const products = [
 		type: "Sport Tank",
 		imgMain: "/images/MEN_Sport_Tank.jpg",
 		ArraysOfImg: ["/images/MEN_Sport_Tank.jpg","/images/MEN_Sport_Tank_2.jpg","/images/MEN_Sport_Tank_3.jpg"],
-		sizes: ["S", "M", "L", "XL"],
+		sizes: [
+		{ size: "S", stock: 10 },{ size: "M", stock: 10 },{ size: "L", stock: 10 },{ size: "XL", stock: 10 }],
 		price: 45.0,
 		currency: "USD",
 		originalPrice: 45.0,
@@ -108,10 +134,14 @@ export const products = [
 		type: "Compression Shirt",
 		imgMain: "/images/MEN_Compression_Shirt.jpg",
 		ArraysOfImg: ["/images/MEN_Compression_Shirt.jpg","/images/MEN_Compression_Shirt_2.jpg","/images/MEN_Compression_Shirt_3.jpg"],
-		sizes: ["M", "L", "XL"],
+		sizes: [
+		{ size: "M", stock: 10 },{ size: "L", stock: 10 },{ size: "XL", stock: 10 }],
 		price: 60.0,
 		currency: "USD",
 		originalPrice: 60.0,
+			S:5,
+		M:20,
+		L:80,
 		description:
 			"Muscle-enhancing compression shirt with sweat-wicking fabric for optimal performance.",
 	},
@@ -122,10 +152,13 @@ export const products = [
 		type: "Track Pants",
 		imgMain: "/images/MEN_Track_Pants.jpg",
 		ArraysOfImg: ["/images/MEN_Track_Pants.jpg","/images/MEN_Track_Pants_2.jpg","/images/MEN_Track_Pants_3.jpg"],
-		sizes: ["S", "M", "L"],
+		sizes: [
+		{ size: "S", stock: 10 },{ size: "M", stock: 10 },{ size: "L", stock: 10 }],
 		price: 70.0,
 		currency: "USD",
-		originalPrice: 70.0,
+		originalPrice: 70.0,	S:25,
+		M:2,
+		L:80,
 		description:
 			"Track pants made with stretch material for ease of movement. Designed for training and casual use.",
 	},
@@ -136,7 +169,8 @@ export const products = [
 		type: "Running Shoes",
 		imgMain: "/images/MEN_Running_Shoes.jpg",
 		ArraysOfImg: ["/images/MEN_Running_Shoes.jpg","/images/MEN_Running_Shoes_2.jpg","/images/MEN_Running_Shoes_3.jpg"],
-		sizes: ["40", "41", "42", "43"],
+		sizes: [
+			{ size: "40", stock: 10 },{ size: "41", stock: 10 },{ size: "42", stock: 10 },{ size: "43", stock: 10 }],
 		price: 130.0,
 		currency: "USD",
 		originalPrice: 130.0,
@@ -150,10 +184,14 @@ export const products = [
 		type: "Hoodie",
 		imgMain: "/images/MEN_Hoodie.jpg",
 		ArraysOfImg: ["/images/MEN_Hoodie.jpg","/images/MEN_Hoodie_2.jpg","/images/MEN_Hoodie_3.jpg"],
-		sizes: ["M", "L", "XL"],
+		sizes: [
+		{ size: "M", stock: 10 },
+		{ size: "L", stock: 10 },
+		{ size: "XL", stock: 10 }],
 		price: 80.0,
 		currency: "USD",
 		originalPrice: 80.0,
+
 		description:
 			"Classic pullover hoodie with warm inner lining and adjustable drawstring.",
 	},
@@ -164,7 +202,8 @@ export const products = [
 		type: "Gym Shorts",
 		imgMain: "/images/MEN_Gym_Shorts.jpg",
 		ArraysOfImg: ["/images/MEN_Gym_Shorts.jpg","/images/MEN_Gym_Shorts_2.jpg","/images/MEN_Gym_Shorts_3.jpg"],
-		sizes: ["S", "M", "L"],
+		sizes: [
+		{ size: "S", stock: 10 },{ size: "M", stock: 10 },{ size: "L", stock: 10 }],
 		price: 38.0,
 		currency: "USD",
 		originalPrice: 38.0,
@@ -180,10 +219,14 @@ export const products = [
 		type: "Graphic Tee",
 		imgMain: "/images/KIDS_Graphic_Tee.jpg",
 		ArraysOfImg: ["/images/KIDS_Graphic_Tee.jpg","/images/KIDS_Graphic_Tee_2.jpg","/images/KIDS_Graphic_Tee_3.jpg"],
-		sizes: ["XS", "S", "M"],
+		sizes: [
+		{ size: "XS", stock: 10 },{ size: "S", stock: 10 },{ size: "M", stock: 10 }],
 		price: 25.0,
 		currency: "USD",
 		originalPrice: 25.0,
+			XS:25,
+		S:30,
+		M:80,
 		description:
 			"Fun and colorful graphic tee made from 100% organic cotton. Great for everyday play.",
 	},
@@ -194,10 +237,14 @@ export const products = [
 		type: "Joggers",
 		imgMain: "/images/MEN_Joggers.jpg",
 		ArraysOfImg: ["/images/MEN_Joggers.jpg","/images/MEN_Joggers_2.jpg","/images/MEN_Joggers_3.jpg"],
-		sizes: ["S", "M", "L"],
+		sizes: [
+		{ size: "S", stock: 10 },{ size: "M", stock: 10 },{ size: "L", stock: 10 }],
 		price: 35.0,
 		currency: "USD",
 		originalPrice: 35.0,
+			S:25,
+		M:20,
+		L:80,
 		description:
 			"Durable joggers with elastic waist and cuffs for maximum comfort during activity.",
 	},
@@ -208,7 +255,8 @@ export const products = [
 		type: "Zip Hoodie",
 		imgMain: "/images/KIDS_Zip_Hoodie.jpg",
 		ArraysOfImg: ["/images/KIDS_Zip_Hoodie.jpg","/images/KIDS_Zip_Hoodie_2.jpg","/images/KIDS_Zip_Hoodie_3.jpg"],
-		sizes: ["M", "L"],
+		sizes: [
+		{ size: "M", stock: 10 },{ size: "L", stock: 10 }],
 		price: 45.0,
 		currency: "USD",
 		originalPrice: 45.0,
@@ -222,7 +270,8 @@ export const products = [
 		type: "Sneakers",
 		imgMain: "/images/KIDS_Sneakers.jpg",
 		ArraysOfImg: ["/images/KIDS_Sneakers.jpg","/images/KIDS_Sneakers_2.jpg","/images/KIDS_Sneakers_3.jpg"],
-		sizes: ["32", "33", "34", "35"],
+		sizes: [
+		{ size: "32", stock: 10 },{ size: "33", stock: 10 },{ size: "34", stock: 10 },{ size: "35", stock: 10 }],
 		price: 55.0,
 		currency: "USD",
 		originalPrice: 55.0,
@@ -236,7 +285,8 @@ export const products = [
 		type: "Polo Shirt",
 		imgMain: "/images/KIDS_Polo_Shirt.jpg",
 		ArraysOfImg: ["/images/KIDS_Polo_Shirt.jpg","/images/KIDS_Polo_Shirt_2.jpg","/images/KIDS_Polo_Shirt_3.jpg"],
-		sizes: ["XS", "S", "M"],
+		sizes: [
+		{ size: "XS", stock: 10 },{ size: "S", stock: 10 },{ size: "M", stock: 10 }],
 		price: 30.0,
 		currency: "USD",
 		originalPrice: 30.0,
@@ -250,7 +300,8 @@ export const products = [
 		type: "Swim Shorts",
 		imgMain: "/images/KIDS_Swim_Shorts.jpg",
 		ArraysOfImg: ["/images/KIDS_Swim_Shorts.jpg","/images/KIDS_Swim_Shorts_2.jpg","/images/KIDS_Swim_Shorts_3.jpg"],
-		sizes: ["S", "M", "L"],
+		sizes: [
+		{ size: "S", stock: 10 },{ size: "M", stock: 10 },{ size: "L", stock: 10 }],
 		price: 28.0,
 		currency: "USD",
 		originalPrice: 28.0,

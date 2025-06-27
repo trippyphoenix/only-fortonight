@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ShipmentOption = ({description,price}) => {
+const ShipmentOption = ({description,price,value,setShipmentCost}) => {
   return (
-    <div><input type="radio-button" /><span>{description}</span><span>{price}</span></div>
+    <div><input name="chooseShipment" type="radio-button" value={value} onClick={setShipmentCost}/><span>{description}</span><span>{price}</span></div>
   )
 }
 

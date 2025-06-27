@@ -17,7 +17,8 @@ const ProductPage = () => {
 	// functionality
 	const [currentImageIndex, setCurrentImageIndex] = useState(product.imgMain);
 	const [isLoading, setIsLoading] = useState(false);
-	const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
+	const [selectedSize, setSelectedSize] = useState(product.sizes[0].size);
+	const {additionToCard}=useContext(Context)
 
 	const handleThumbnailClick = (index) => {
 		if (index !== currentImageIndex) {
@@ -82,14 +83,14 @@ const ProductPage = () => {
 
 									{/* Size Options */}
 									<div className={styles.sizeOptions}>
-										{product.sizes.map((size) => (
+										{product.sizes.map((sizes) => (
 											<button
-												key={size}
-												onClick={() => handleSizeSelect(size)}
+												key={sizes}
+												onClick={() => handleSizeSelect(sizes.size)}
 												className={styles.sizeOption}
-												data-selected={selectedSize === size}
+												data-selected={selectedSize === sizes.size}
 											>
-												{size}
+												{sizes.size}
 											</button>
 										))}
 									</div>
@@ -104,7 +105,7 @@ const ProductPage = () => {
 								</p>
 							</div>
 							<div className={styles.addToCartContainer}>
-								<button className={styles.addToCartButton}>ADD TO CART</button>
+								<button className={styles.addToCartButton} onClick={()=>additionToCard(selectedSize,product,"increase")}>ADD TO CART</button>
 							</div>
 							<div className={styles.descriptionContainer}>
 								<p className={styles.description}>{product.description}</p>
