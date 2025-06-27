@@ -20,6 +20,7 @@ const Shipment = () => {
       <ShipmentOption description="Standard Shipping" price="free" />
       <ShipmentOption description="Express Shipping" price="4.99$"/>
       <ShippingFooter back="details" goto="" goToText="Go to payment"/>
+      <div></div>
     </div>
   );
 };
