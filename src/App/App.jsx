@@ -91,7 +91,7 @@ function App() {
 
     return { totalPrice, totalQuantity,currentCurrency:symbols[cartItems[0]?.currency]};
   }, [cartItems]);
-
+// hope it merged well
   return (
     <div>
       <Context.Provider
