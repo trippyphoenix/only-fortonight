@@ -126,6 +126,7 @@ function App() {
 							</>
 						}
 					/>
+          // This is the route for kids products
 					<Route
 						path="/kids"
 						element={
